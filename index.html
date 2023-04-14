@@ -727,18 +727,18 @@
       <div class="w-layout-grid footer-grid">
         <div>
           <div class="footer-column-header" id="wrapper1">Build Credit <img src="img/arrow.png" alt="" width="25px" id="footer_arrow1"></div>
-          <div><a href="javascript:void(0)" class="footer-links1 hidden">Petal 1</a><a href="javascript:void(0)" class="footer-links1 hidden">Petal 2</a><a href="javascript:void(0)"
-            class="footer-links1 hidden">App</a></div>
+          <div><a href="javascript:void(0)" class="footer-links1">Petal 1</a><a href="javascript:void(0)" class="footer-links1">Petal 2</a><a href="javascript:void(0)"
+            class="footer-links1">App</a></div>
         </div>
         <div>
           <div class="footer-column-header" id="wrapper2">Company <img src="img/arrow.png" alt="" width="25px" id="footer_arrow2"></div>
-          <a href="javascript:void(0)" class="footer-links2 hidden">Company</a><a href="javascript:void(0)" class="footer-links2 hidden">Careers</a><a href="javascript:void(0)"
-            class="footer-links2 hidden">Reviews</a>
+          <a href="javascript:void(0)" class="footer-links2">Company</a><a href="javascript:void(0)" class="footer-links2">Careers</a><a href="javascript:void(0)"
+            class="footer-links2">Reviews</a>
         </div>
         <div>
           <div class="footer-column-header" id="wrapper3">Resources <img src="img/arrow.png" alt="" width="25px" id="footer_arrow3"></div>
-          <a href="javascript:void(0)" class="footer-links3 hidden">Blog</a><a href="javascript:void(0)" target="_blank" class="footer-links3 hidden">Help Center</a><a
-            href="javascript:void(0)" class="footer-links3 hidden">Contact Us</a>
+          <a href="javascript:void(0)" class="footer-links3">Blog</a><a href="javascript:void(0)" target="_blank" class="footer-links3">Help Center</a><a
+            href="javascript:void(0)" class="footer-links3">Contact Us</a>
         </div>
         <div class="footer-right-side-div">
           <div class="footer-get-app">
@@ -837,10 +837,16 @@
     arrow1.style.display = "inline-block";
     arrow2.style.display = "inline-block";
     arrow3.style.display = "inline-block";
+    document.querySelectorAll('.footer-links1').forEach(c => c.classList.add('hidden'));
+    document.querySelectorAll('.footer-links2').forEach(c => c.classList.add('hidden'));
+    document.querySelectorAll('.footer-links3').forEach(c => c.classList.add('hidden'));
   } else {
     arrow1.style.display = "none";
     arrow2.style.display = "none";
     arrow3.style.display = "none";
+    document.querySelectorAll('.footer-links1').forEach(c => c.classList.remove('hidden'));
+    document.querySelectorAll('.footer-links2').forEach(c => c.classList.remove('hidden'));
+    document.querySelectorAll('.footer-links3 ').forEach(c => c.classList.remove('hidden'));
   }
   
   wrapper1.addEventListener("click", function() {
