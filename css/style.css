@@ -795,16 +795,16 @@ th {
    }
    
    .container {
-     max-width: 1280px;
+     max-width: 1400px;
    }
    
    .container.relative {
      position: relative;
    }
-   
+/*    
    .container.home-hero {
      max-width: 100%;
-   }
+   } */
    
    .section {
      padding: 96px 30px;
@@ -1289,7 +1289,7 @@ th {
      display: -ms-flexbox;
      display: flex;
      min-height: auto;
-     padding: 12rem 32px 32px;
+     padding: 12rem 0px 32px;
      -webkit-box-orient: vertical;
      -webkit-box-direction: normal;
      -webkit-flex-direction: column;
