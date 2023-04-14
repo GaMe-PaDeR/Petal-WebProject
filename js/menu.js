@@ -40,7 +40,7 @@ var isMenuShow = false;
       link4.style.display = "none";
       link5.style.display = "none";
       rem_button.style.display = "none";
-      rem_brand.style.display = "none";
+      rem_brand.style.display = "block";
       rem_menu.style.display = "none";
       menu_button.classList.add('w--open');
       nav_overlay.style.display = "block";
