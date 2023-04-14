@@ -1229,7 +1229,7 @@
        display: -ms-flexbox;
        display: flex;
        min-height: auto;
-       padding: 10rem 32px 32px;
+       padding: 12rem 32px 32px;
        -webkit-box-orient: vertical;
        -webkit-box-direction: normal;
        -webkit-flex-direction: column;
