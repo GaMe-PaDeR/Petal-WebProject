@@ -6,12 +6,12 @@
   <title>Petal - Responsible credit for the modern world.</title>
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link href="css/style.css" rel="stylesheet" type="text/css" id="css_link" />
+</head>
+
+<body id="body">
   <!-- SEGMENT TAG -->
   <img src="https://segment.prod.bidr.io/associate-segment?buzz_key=blisspoint&segment_key=blisspoint-1&value="
     height="0" width="0">
-</head>
-
-<body>
   <div data-collapse="medium" class="navbar w-nav">
     <div class="nav-container w-container">
       <a href="javascript:void(0)" class="brand w-nav-brand w--current" id="removable-brand">
@@ -58,7 +58,7 @@
         <a href="javascript:void(0)" class="nav-link mobile w-nav-link" id="link4">Blog</a>
         <a href="javascript:void(0)" class="nav-link w-nav-link" id="link5">App</a>
       </nav>
-      <div class="w-nav-overlay" id="w-nav-overlay-0" style="height: 8000px; display: block;">
+      <div class="w-nav-overlay" id="w-nav-overlay-0" style="display: none;">
           <nav class="nav-menu w-nav-menu" id="nav-block" style="display: none;" data-nav-menu-open="">
             <div class="nav-link desktop w-dropdown w--nav-dropdown-open" style="max-width: 1280px;">
               <div class="nav-drop-toggle w-dropdown-toggle w--nav-dropdown-toggle-open" id="w-dropdown-toggle-0">
@@ -813,150 +813,8 @@
   </style>
 </body>
 
-<script>
-  anim = document.getElementById('main-animation');
-  let i = 1;
-  function Loop() {
-    if (i == 1) {
-      anim.style.transform = "rotate(180deg) translate(-60px, 0px)";
-      anim.style.transition = "10s cubic-bezier(0, 0, 1, 1)";
-      i++;
-    }
-    else {
-      anim.style.transform = "rotate(0deg) translate(0px, 0px)";
-      anim.style.transition = "10s cubic-bezier(0, 0, 1, 1)";
-      i--;
-    }
-    setTimeout(Loop, 10010);
-  }
-  window.onload = Loop;
-
-  document.getElementById('toggle-menu').onmouseenter = function () {
-    document.getElementById('nav-dropdown').classList.toggle('w--open');
-  }
-
-  document.getElementById('nav-dropdown').onmouseleave = function () {
-    document.getElementById('nav-dropdown').classList.remove('w--open');
-  }
-
-  var petal = document.getElementById('petal1-dropcard');
-  var petal2 = document.getElementById('petal2-dropcard');
-
-  document.getElementById('dropdown-petal1').onmouseenter = function () {
-    if (window.innerWidth < 1200) {
-      petal.style.transform = "rotate(45deg) translate(-50px, 120px)";
-      petal.style.transition = "0.8s ease";
-      petal.style.height = "400px";
-    }
-    else {
-      petal.style.transform = "rotate(45deg) translate(-80px, 120px)";
-      petal.style.transition = "0.8s ease";
-      petal.style.height = "500px";
-    }
-  }
-
-  document.getElementById('dropdown-petal1').onmouseleave = function () {
-    petal.style.transform = "rotate(0deg) translate(0px, 0px)";
-    petal.style.transition = "0.8s ease";
-    petal.style.height = null;
-  }
-
-  document.getElementById('dropdown-petal2').onmouseenter = function () {
-    if (window.innerWidth < 1200) {
-      petal2.style.transform = "rotate(45deg) translate(-50px, 120px)";
-      petal2.style.transition = "0.8s ease";
-      petal2.style.height = "400px";
-    }
-    else {
-      petal2.style.transform = "rotate(45deg) translate(-80px, 120px)";
-      petal2.style.transition = "0.8s ease";
-      petal2.style.height = "500px";
-    }
-  }
-
-  document.getElementById('dropdown-petal2').onmouseleave = function () {
-    petal2.style.transform = "rotate(0deg) translate(0px, 0px)";
-    petal2.style.transition = "0.8s ease";
-    petal2.style.height = null;
-  }
-
-  var isMenuShow = false;
-  var menu_button = document.getElementById('menu-button');
-  var link1 = document.getElementById('link1');
-  var link2 = document.getElementById('link2');
-  var link3 = document.getElementById('link3');
-  var link4 = document.getElementById('link4');
-  var link5 = document.getElementById('link5');
-  var rem_menu = document.getElementById('removable-menu');
-  var rem_button = document.getElementById('removable-button');
-  var rem_brand = document.getElementById('removable-brand');
-  var nav_block = document.getElementById('nav-block');
-  var nav_overlay = document.getElementById('w-nav-overlay-0');
-  var nav_menu = document.getElementById('nav-menu');
-
-  document.getElementById('menu-button').addEventListener("click", function () {
-    if (isMenuShow) {
-      isMenuShow = false;
-      link3.style.display = "inline-block";
-      link5.style.display = "inline-block";
-      rem_menu.style.display = "inline-block";
-      nav_block.style.display = "none";
-      nav_block.style.top = "100%";
-      menu_button.classList.remove('w--open');
-      nav_overlay.style.display = "none";
-      nav_overlay.style.height = null;
-      rem_button.style.display = null;
-      rem_brand.style.display = null;
-      nav_menu.style.display = null;
-    }
-    else {
-      isMenuShow = true;
-      nav_block.style.display = "block";
-      nav_block.style.top = "0%";
-      link1.style.display = "none";
-      link2.style.display = "none";
-      link3.style.display = "none";
-      link4.style.display = "none";
-      link5.style.display = "none";
-      rem_button.style.display = "none";
-      rem_brand.style.display = "none";
-      rem_menu.style.display = "none";
-      menu_button.classList.add('w--open');
-      nav_overlay.style.display = "block";
-      nav_overlay.style.height = "2000%";
-      nav_menu.style.display = "block";
-    }
-  })
-
-  if (window.innerWidth > 991) {
-    nav_overlay.style.display = "none";
-    nav_block.style.display = "none";
-  }
-  else {
-    nav_overlay.style.display = "block";
-  }
-
-  dark_theme_btn = document.getElementById("dark_theme_toggle");
-  dark_theme_img = document.getElementById("dark_theme_image");
-  dark_theme_btn1 = document.getElementById("dark_theme_toggle1");
-  dark_theme_img1 = document.getElementById("dark_theme_image1");
-  css_link = document.getElementById("css_link");
-  var isThemeDark=0;
-  function dark(){
-    if (isThemeDark==0){
-      css_link.href = "css/dark.css";
-      dark_theme_img.src = "img/sun.png";
-      dark_theme_img1.src = "img/sun.png";
-      isThemeDark = 1;
-    } else {
-      css_link.href = "css/style.css";
-      dark_theme_img.src = "img/moon.png";
-      dark_theme_img1.src = "img/moon.png";
-      isThemeDark = 0;
-    }
-    
-  }
-
-</script>
-
+<script src="js/animation.js"></script>
+<script src="js/rotate.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/darktheme.js"></script>
 </html>
