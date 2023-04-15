@@ -725,16 +725,16 @@
      }
      
      .container {
-       max-width: 1280px;
+       max-width: 1400px;
      }
      
      .container.relative {
        position: relative;
      }
      
-     .container.home-hero {
+     /* .container.home-hero {
        max-width: 100%;
-     }
+     } */
      
      .section {
        padding: 96px 30px;
